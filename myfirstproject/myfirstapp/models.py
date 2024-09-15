@@ -7,7 +7,7 @@ class Car(models.Model):
     year=models.TextField(max_length=4,null=True)#si ya creamos y aumentamos un campo indetificar que puede ser null
     price=models.TextField(max_length=4, null=True)
 
-    def __str__(self):
+    def __str__(self): # devuelve la representancion textual en el sheel del objeto
         return f": {self.title} - {self.year} - {self.price}"
     
 class Publisher(models.Model):

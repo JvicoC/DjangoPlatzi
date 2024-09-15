@@ -14,10 +14,16 @@ Including another URLconf (inlcuir otras URLS, agrupadas por aplicaciones)
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include
+from django.http import HttpResponse
+from django.urls import path
+from .views import my_view, my_view_test, CarListView, CarListView02
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('App001/',include('myfirstapp.urls'))
+    #path("listado/",my_view),
+    path("listado/",CarListView.as_view()),
+    #path("cars/",CarListView02.as_view()),
+    path('cars/', CarListView.as_view(), name='cars01')
+    path("detalle/<int:id>",my_view_test),
+    #path("detalle/<int:id>",CarListView.as_view()),
+    path("marcas/<str:brand>",my_view_test)    
 ]

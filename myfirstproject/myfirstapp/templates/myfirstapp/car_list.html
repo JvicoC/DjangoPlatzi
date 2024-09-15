@@ -8,12 +8,22 @@
 <body>
     
     <h1>Hi Car...!!!</h1>
-    <h2>Vicolas</h2>
+    <h2>Lista 01</h2>
     <ul>
-        {% for car in car_list  %}
+        {% for car in cars01  %}
             <li>{{car.title}}</li>
         {% endfor %}
     </ul>
-    <h1>{{ car_list }}</h1>
+    <h2>Lista 02</h2>
+    <ul>
+        {% for car in libros  %}
+            <li>{{car.title}}</li>
+        {% endfor %}
+    </ul>
+    <h2>Lista 03</h2>
+    <h1>{{ context }}</h1>
+    <h2>
+
+    </h2>
 </body>
 </html>
