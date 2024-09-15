@@ -4,7 +4,7 @@ from django.db import models
 
 class Car(models.Model):
     title= models.TextField(max_length=250)
-    year=models.TextField(max_length=4,null=True)
+    year=models.TextField(max_length=4,null=True)#si ya creamos y aumentamos un campo indetificar que puede ser null
     price=models.TextField(max_length=4, null=True)
 
     def __str__(self):
@@ -29,6 +29,9 @@ class Profile(models.Model):
     website=models.URLField()
     biografy=models.TextField(max_length=500)
     
+    def __str__(self):
+        return self.name
+       
 class Book(models.Model):
     title=models.TextField(max_length=200)
     publication_date=models.DateField()
