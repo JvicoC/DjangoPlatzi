@@ -22,7 +22,7 @@ urlpatterns = [
     #path("listado/",my_view),
     path("listado/",CarListView.as_view()),
     #path("cars/",CarListView02.as_view()),
-    path('cars/', CarListView.as_view(), name='cars01')
+    path('cars/', CarListView02.as_view()),
     path("detalle/<int:id>",my_view_test),
     #path("detalle/<int:id>",CarListView.as_view()),
     path("marcas/<str:brand>",my_view_test)    
